@@ -1,29 +1,13 @@
-﻿<style>
-	.li-use {
-		font-size: 1.1em;
-		font-weight: 650;
-	}
-			
-	details > summary {
-		cursor: pointer;
-		font-size: 1.2em;
-	}
-			
-	#ul-notes {
-		list-style-type: square;
-	}
-</style>
-
-# General Info
+﻿# General Info
 Automatically backup files on an external hard drive on insertion.
 	
 ## How to use
-1. Installation. {.li-use}
+1. Installation.
     1. [Download](https://github.com/ItaiShek/AutoBackup/releases/download/v1.0.0/AutoBackup.zip) the compressed file.
     2. Extract it to the desired directory.
 	
 		
-2. Creating a backup list. {.li-use}
+2. Creating a backup list.
     1. Open `BackupList.txt`.
 	2. Enter each file/directory you want to back up in a new line.	
 	<br>For example:
@@ -33,7 +17,7 @@ Automatically backup files on an external hard drive on insertion.
 	C:\Cat Photos\
 	```
 
-3. Creating a devices list. {.li-use}
+3. Creating a devices list.
     1. Open `VolumeList.txt`.
     2. Connect your external devices.
 	3. Open the terminal and run the command `vol X:` where X is your external device.
@@ -51,7 +35,7 @@ Automatically backup files on an external hard drive on insertion.
 	0xad12cb34;X:\Important
 	1078143446;X:\Tools\KeePassXC
 	```
-4. Creating a scheduled task. {.li-use}
+4. Creating a scheduled task.
 	1. Open the task scheduler (Click ⊞ Win+R, then type taskschd.msc and press enter).
 	2. Optional: Create a new folder named `My Tasks`.
 	3. Create a basic task by clicking `right mouse key > Create Basic Task...` or clicking in the menu `Action > Create Basic Task...`
@@ -60,7 +44,7 @@ Automatically backup files on an external hard drive on insertion.
 		3. Select `Start A Program` in Action and click next.
 		4. In the `Program/Script:` field browse and choose `AutoBackup.exe` file.<br>
 		In the `Start in` field choose the directory that holds the program's files (**Important**).
-		5. Optional: In the `Add arguments` field you can add the value `nocopy` if you don't want to create another copy (see [notes](#notes)). {#args}
+		5. Optional: In the `Add arguments` field you can add the value `nocopy` if you don't want to create another copy (see [notes](#notes)). 
 
 <details>
 	<summary id="notes">Notes</summary>
@@ -72,7 +56,7 @@ Automatically backup files on an external hard drive on insertion.
 		<br>
 		This is done in order to prevent overwriting the backup file with a corrupted file.
 		<br>
-		If you don't want to create another copy (recommended for large files/directories)add the argument <code>nocopy</code> in the <a href="#args">task properties</a> (Action tag).
+		If you don't want to create another copy (recommended for large files/directories)add the argument <code>nocopy</code> in the task properties (Action tag).
 		</li>
 		<li>The program will overwrite the backup file only if it's older than the file on the system.</li>
 		<li>You can add the serial number as an integer (without <code>0x</code> prefix)</li>
